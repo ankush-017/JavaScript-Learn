@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ankush Classes With ver booster course</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // ------ 1st Way of setTimeout
+    // setTimeout(()=>{
+    //     console.log('Ankush Kumar');
+    // },2000)
+    // ------ 2nd Way
+    // const sayAnkush = ()=>{
+    //     console.log('Ankush Kumar');
+    // }
+    // setTimeout(sayAnkush,2000);
+    // ------- setInterval
+    // setInterval(()=>{
+    //     console.log('Ankush Kumar');
+    // },2000)
+
+    const changeHeading = ()=>{
+        document.querySelector('h1').innerHTML='Best IIT jee Course';
+    }
+    const changeMe = setTimeout(changeHeading,5000);
+    document.querySelector('#stop').addEventListener('click',(e)=>{
+        clearTimeout(changeMe);
+    })
+</script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM || Events</title>
+</head>
+<body style="background-color: #414141;color: aliceblue;">
+    <h2>Amazing images</h2>
+
+    <div>
+        <ul class="images">
+            <li><img width="200px" id="photoshop" src="images.jpeg" alt="photoshop"></li>
+            <li><img width="200px" id="cake" src="pexels-photo-14913583.jpeg" alt=""></li>
+            <li><img width="200px" id="leaves" src="pexels-photo-25186561.jpeg" alt=""></li>
+            <li><img width="200px" id="flower" src="free-photo-of-a-smiling-bride-with-a-sunflower.jpeg" alt=""></li>
+            <li><img width="200px" id="cat" src="free-photo-of-close-up-of-kitten.jpeg" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.querySelector("#flower").onclick = function(){
+    //     alert('Flower clicked')
+    // }
+            /***--  Best method  --*/
+    // document.querySelector('.images').addEventListener('click',(e)=>{
+    //     console.log('clicked inside the ul');
+    // })
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // client-x, client-y, screen-x,screen-y
+    // altkey, ctrlkey, shiftkey,keycode
+    
+    // document.querySelector('#flower').addEventListener('click',(e)=>{
+    //     console.log('flower clicked');
+    //     e.stopPropagation();
+    // })
+
+    // document.querySelector('#google').addEventListener('click',(e)=>{
+    //     console.log('Google clicked');
+    //     e.stopPropagation();
+    //     e.preventDefault();
+    // })
+
+    // IMPORTANT**********
+    document.querySelector('.images').addEventListener('click',(e)=>{
+        console.log(e.target.tagName);
+      if(e.target.tagName === 'IMG'){
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+      }
+        // removeIt.parentNode.removeChild(removeIt);
+    })
+</script>
+</html>

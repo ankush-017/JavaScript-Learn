@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM || Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang){
+       const li = document.createElement('li');
+       li.innerText = `${lang}`;
+       document.querySelector('.language').appendChild(li);
+    }
+    addLanguage('Python');
+    addLanguage('Java');
+
+    function addOptLanguage(lang){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lang));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptLanguage('React');
+
+    // Edit 
+    const SecondLang = document.querySelector("li:nth-child(2)")
+    //SecondLang.innerHTML = "Ruby";
+    
+    // Another Way
+    const newLi = document.createElement('li');
+    newLi.textContent = "Ruby";
+    SecondLang.replaceWith(newLi);
+
+    // Edit
+    const secondLang = document.querySelector("li:first-child")
+    secondLang.outerHTML = '<li>Typescript</li>';
+
+    //Remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove();
+
+</script>
+</html>
