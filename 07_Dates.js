@@ -12,7 +12,7 @@ let myDate = new Date();
 
 //console.log(myDate.toTimeString());//11:41:43 GMT+0530 (India Standard Time)
 // console.log(myDate.toLocaleString());//16/7/2024, 11:42:24 am
-// console.log(myDate.getMonth()); // 6
+// console.log(myDate.getMonth()); // 6 (month is 0-based index);
 
 /**************/
 // console.log(typeof(myDate));//object
@@ -25,7 +25,7 @@ let myCreatedDate = new Date("07-19-2024");
 let myTimeStamp = Date.now();
 
 // console.log(myTimeStamp);
-//console.log(Math.floor(myCreatedDate.getTime()/1000));//1720895400
+//console.log(Math.floor(myCreatedDate.getTime()/1000));//1720895400  (time came in mili second) divide by 1000 came in sec;
 // let cd = Math.floor(myCreatedDate.getTime()/(1000*60*60));
 // convert in second
 //console.log(Math.floor(Date.now()/1000));//1721111314
